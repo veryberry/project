@@ -12,6 +12,7 @@
     'depends': ['project'],
     'data': [
         'views/project.xml',
+        'wizard/create_project_from_tmpl.xml',
     ],
     'application': False,
     'development_status': 'Beta',

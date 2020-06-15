@@ -8,8 +8,8 @@
     <field name="arch" type="xml">
         <xpath expr="//header" position="inside">
           <button string="Create Project From Template"
-                  type="object"
-                  name="create_project_from_template"
+                  type="action"
+                  name="%(create_project_from_tmpl_action)d"
                   class="oe_highlight"
                   attrs="{'invisible': [('is_template', '=', False)]}"/>
         </xpath>
@@ -31,7 +31,7 @@
         <xpath expr="//div[hasclass('o_kanban_card_manage_section')]" position="inside">
           <field name="is_template" invisible="1"/>
           <div t-if="record.is_template.raw_value" role="menuitem">
-              <a name="create_project_from_template" type="object">Create Project from Template</a>
+              <a name="%(create_project_from_tmpl_action)d" type="action">Create Project from Template</a>
           </div>
         </xpath>
     </field>
